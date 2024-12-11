@@ -147,12 +147,12 @@ function App() {
     },
   ]
   
-  function truncateText(text: string, wordLimit: number): string {
-    const words = text.split(' ');
-    return words.length > wordLimit
-      ? words.slice(0, wordLimit).join(' ') + '...'
-      : text;
-  }
+  // function truncateText(text: string, wordLimit: number): string {
+  //   const words = text.split(' ');
+  //   return words.length > wordLimit
+  //     ? words.slice(0, wordLimit).join(' ') + '...'
+  //     : text;
+  // }
   
   
 
@@ -309,7 +309,8 @@ function App() {
                         <CardTitle className="text-2xl text-balance font-bold">{project.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="flex flex-col justify-center gap-4">
-                        <p>{truncateText(project.description, 15)}</p>
+                        {/* <p>{truncateText(project.description, 15)}</p> */}
+                        <p>{project.description}</p>
                       
                         <div className="flex flex-col">
                           <span className="font-semibold">Technologies:</span>
