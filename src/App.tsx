@@ -147,12 +147,13 @@ function App() {
     },
   ]
   
-  function truncateText(text, wordLimit) {
+  function truncateText(text: string, wordLimit: number): string {
     const words = text.split(' ');
     return words.length > wordLimit
       ? words.slice(0, wordLimit).join(' ') + '...'
       : text;
   }
+  
   
 
 
